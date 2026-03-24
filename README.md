@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Business Tech - Professional News Website
 
-## Getting Started
+A modern, production-ready Next.js news website for **business-tech.co.za** featuring enterprise technology news, AI innovation, and business strategy insights.
 
-First, run the development server:
+## Features
+
+- **Next.js 14+ App Router** - Modern React framework with static generation
+- **Professional News Layout** - Inspired by News24, Bloomberg, and TechCrunch
+- **9 Real Articles** - Professional journalism-quality content about:
+  - AI in business strategy
+  - SME automation strategies
+  - Digital transformation trends
+  - AI-powered customer service
+  - Cybersecurity in the age of AI
+  - South African tech startup ecosystem
+  - Cloud computing strategies
+  - The future of work with AI
+  - Building AI strategy for business leaders
+
+- **Fully Responsive** - Mobile-first design with hamburger menu
+- **SEO Optimized** - Meta tags, Open Graph, and semantic HTML
+- **Static Site Generation** - All pages pre-rendered for optimal performance
+- **Category Navigation** - AI, Strategy, Innovation, Startups, Digital Transformation
+- **Article Detail Pages** - Full articles with author bios and related content
+- **Trending Sidebar** - Featured trending articles
+- **Professional Design** - Dark navy header/footer, clean typography, blue accents
+
+## Tech Stack
+
+- Next.js 16.2.1
+- React 19
+- TypeScript
+- Tailwind CSS
+- Static Export (no server required)
+
+## Local Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Open browser to http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build & Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Build for production
+npm run build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# The build outputs to the `out` directory for static hosting
+```
 
-## Learn More
+## Deploy to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Push this repository to GitHub
+2. Import the project in Vercel
+3. Set the domain to **business-tech.co.za**
+4. Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vercel will automatically detect Next.js and use the correct build settings.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+business-tech/
+├── app/
+│   ├── article/[slug]/     # Dynamic article pages
+│   ├── category/[slug]/    # Dynamic category pages
+│   ├── layout.tsx          # Root layout with header/footer
+│   ├── page.tsx            # Homepage
+│   └── globals.css         # Global styles
+├── components/
+│   ├── Header.tsx          # Navigation header
+│   ├── Footer.tsx          # Site footer
+│   ├── ArticleCard.tsx     # Article preview cards
+│   └── TrendingSidebar.tsx # Trending articles sidebar
+├── data/
+│   └── articles.ts         # All article content and metadata
+└── public/                 # Static assets
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Article Management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All articles are stored in `data/articles.ts` as TypeScript objects. To add a new article:
+
+1. Add a new article object to the `articles` array
+2. Include: id, title, slug, excerpt, content, category, author, publishedAt, imageUrl
+3. Run `npm run build` to regenerate static pages
+
+## Authors
+
+All articles credited to fictional professional journalists:
+- Sarah Chen - Tech Editor
+- James Molefe - Business Correspondent
+- Naledi Khumalo - Digital Strategy Analyst
+- Lindiwe Mthembu - CX Technology Reporter
+- Dr. Anwar Patel - Cybersecurity Specialist
+- Zinhle Ngcobo - Startup Ecosystem Reporter
+- Pieter van Zyl - Cloud Infrastructure Specialist
+- Dr. Themba Mthethwa - Labor Economics Researcher
+- Ravi Chetty - AI Strategy Consultant
+
+## Color Scheme
+
+- **Primary Navy:** #0F172A (header/footer background)
+- **Accent Blue:** #2563EB (links, category badges, highlights)
+- **White/Gray:** Clean content areas with subtle gray backgrounds
+- **Typography:** Inter font family, professional hierarchy
+
+## Content Quality
+
+All articles are 400-600 words of professional journalism-quality writing covering:
+- Enterprise technology trends
+- AI implementation strategies
+- South African business technology landscape
+- Digital transformation best practices
+- Cybersecurity insights
+- Startup ecosystem analysis
+
+## License
+
+Copyright 2026 Business Tech. All rights reserved.
